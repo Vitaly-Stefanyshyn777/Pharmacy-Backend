@@ -19,12 +19,14 @@ export const setupServer = () => {
   app.use(express.json());
   app.use(
     cors({
-      origin: 'https://e-pharmacy-client-one.vercel.app',
+      // origin: 'https://e-pharmacy-client-one.vercel.app',
+      origin: 'https://pharmacy-frontend-six.vercel.app',
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       allowedHeaders: ['Content-Type', 'Authorization'],
       credentials: true,
     }),
   );
+  // app.options('*', cors());
 
   app.use(
     pino({
